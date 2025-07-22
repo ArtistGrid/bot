@@ -1,4 +1,4 @@
-name: Sheets Deploy Hook
+name: Bot Deploy Hook
 
 on:
   push:
@@ -8,7 +8,7 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - name: Send GET request to Sheets Deploy Hook
+      - name: Send GET request to Bot Deploy Hook
         run: curl -X GET "$BOT_DEPLOY_HOOK"
         env:
           SHEETS_DEPLOY_HOOK: ${{ secrets.BOT_DEPLOY_HOOK }}
